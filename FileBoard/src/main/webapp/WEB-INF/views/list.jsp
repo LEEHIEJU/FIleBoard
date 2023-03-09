@@ -71,7 +71,7 @@
 		<c:if test="${not empty pv.list }">
 			<c:forEach var="vo" items="${pv.list }" varStatus="vs">
 				<tr align="center">
-					<td>${vo.idx }</td>
+					<td>${pv.totalCount - (pv.currentPage-1)*pv.pageSize - vs.index }</td>
 					<td align="left" >
 						<a href="#" onclick='sendPost("${pageContext.request.contextPath }/board/view",{"p":${pv.currentPage },"s":${pv.pageSize },"b":${pv.blockSize },"idx":${vo.idx },"m":"view","h":"true"},"post")'><c:out value="${vo.subject }"></c:out></a>
 						<%-- 오늘 저장한 글이면 new 아이콘을 달아보자  --%>		
