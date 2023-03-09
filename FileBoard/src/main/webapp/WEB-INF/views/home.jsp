@@ -8,10 +8,11 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	안녕하세요 반갑습니다.
 </h1>
+<h2>게시판은 url에 board/list를 치고 들어가시면 됩니다.</h2>
 
 <P>  The time on the server is ${serverTime}. </P>
-<h2>DB시간 : ${today }</h2>
+<p> DB시간 : ${today }</p>
 </body>
 </html>

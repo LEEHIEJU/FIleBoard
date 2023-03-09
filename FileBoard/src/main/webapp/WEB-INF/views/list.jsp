@@ -103,7 +103,7 @@
 				</tr>		
 			</c:forEach>
 			<tr>
-				<td style="border: none;text-align: center;" colspan="5">
+				<td style="border: none;text-align: center;" colspan="5" class="btn-group me-2">
 					${pv.pageList }
 				</td>
 			</tr>
