@@ -34,7 +34,7 @@
 <body>
 	<table id="content">
 		<tr>
-			<td colspan="5" class="title">자료실 게시판 - 목록보기</td>
+			<td colspan="5" class="title">자료실 게시판</td>
 		</tr>
 		<tr>
 			<td colspan="5" class="info">
@@ -90,20 +90,20 @@
 					</td>
 					<td>
 						<%-- 첨부파일을 다운 받도록 링크를 달아준다. --%>
-						<c:if test="${not empty vo.fileList }">
-							<c:forEach var="fvo" items="${vo.fileList }">
+						<c:if test="${not empty fv.fileList }">
+							<c:forEach var="fvo" items="${fv.fileList }">
 								<c:url var="url" value="/board/download">
-									<c:param name="of" value="${vo.originalFileName }"></c:param>
-									<c:param name="sf" value="${vo.saveFileName }"></c:param>
+									<c:param name="of" value="${fvo.originalFileName }"></c:param>
+									<c:param name="sf" value="${fvo.saveFileName }"></c:param>
 								</c:url>
-								<a href="${url }" title="${vo.originalFileName }"><span class="material-icons">file_download</span></a>
+								<a href="${url }" title="${fvo.originalFileName }"><span class="material-icons">file_download</span></a>
 							</c:forEach>
 						</c:if>
 					</td>
 				</tr>		
 			</c:forEach>
 			<tr>
-				<td style="border: none;text-align: center;" colspan="5" class="btn-group me-2">
+				<td style="border: none;text-align: center;" colspan="5" >
 					${pv.pageList }
 				</td>
 			</tr>

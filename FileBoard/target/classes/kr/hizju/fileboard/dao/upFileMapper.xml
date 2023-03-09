@@ -6,9 +6,9 @@
 	<!-- 1. 첨부파일 저장하기 -->
 	<insert id="insert" parameterType="UpFileVO">
 		insert into upfile 
-			(idx,ref, saveFileName, ORIGINALFILENAME)
+			(idx,ref, saveFileName, originalFileName)
 		values
-			(upFile_idx_seq.nextval,#{ref}, #{saveFileName}, #{ORIGINALFILENAME})
+			(upFile_idx_seq.nextval,#{ref}, #{saveFileName}, #{originalFileName})
 	</insert>
 	<!-- 2. 첨부파일 삭제하기 -->
 	<delete id="deleteByIdx" parameterType="int">
