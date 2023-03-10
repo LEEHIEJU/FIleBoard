@@ -18,3 +18,10 @@ function sendPost(url, params) {
     document.body.appendChild(form);
     form.submit();	// 전송~
 }
+
+$(".pageList").on("click", function(e){
+ e.priventDefault();
+ moveForm.find("input[name='pageSize']").val($(this).attr("href"));
+ moveForm.attr("action", "/board/list");
+ moveForm.submit();
+});

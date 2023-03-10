@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>자료실</title>
+<title>☆게시판☆</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://kit.fontawesome.com/5835e4ac0d.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -71,6 +71,7 @@
 		<c:if test="${not empty pv.list }">
 			<c:forEach var="vo" items="${pv.list }" varStatus="vs">
 				<tr align="center">
+				<!-- 페이지 번호 계산 -->
 					<td>${pv.totalCount - (pv.currentPage-1)*pv.pageSize - vs.index }</td>
 					<td align="left" >
 						<a href="#" onclick='sendPost("${pageContext.request.contextPath }/board/view",{"p":${pv.currentPage },"s":${pv.pageSize },"b":${pv.blockSize },"idx":${vo.idx },"m":"view","h":"true"},"post")'><c:out value="${vo.subject }"></c:out></a>
@@ -104,7 +105,7 @@
 			</c:forEach>
 			<tr>
 				<td style="border: none;text-align: center;" colspan="5" >
-					${pv.pageList }
+				${pv.pageList}
 				</td>
 			</tr>
 		</c:if>
